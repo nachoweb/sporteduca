@@ -1,0 +1,34 @@
+$lcolor:#FFA500;
+
+@import url(http://fonts.googleapis.com/css?family=Salsa);
+
+/****BASE STYLES*****/
+body{@include linear-gradient($lcolor,#FFF);}
+
+/****LAYOUT STYLES*****/
+#container{width: 900px;margin: auto; }
+header{padding: 15px 0;} 
+/*#topsec{padding: 5px}*/
+#logo{margin:0 40px;font-family:'Salsa';font-weight: bold;font-size: 35px;vertical-align: middle;color:Navy;}
+
+
+nav {
+    li{
+        float:left;width: 14%;margin:0 18px;padding:20px 5px; border: 4px solid darken($lcolor,10%);@include border-radius(18px);text-align: center;vertical-align: middle;
+        background-color: lighten($lcolor,40%);
+        
+        &:hover{border-color:yellow;background-color: lighten($lcolor,60%);}
+        
+        &:hover > a {color:#06e;}
+        
+         a { text-decoration: none;font-family: 'Salsa';font-size: 18px; color: Navy;  }
+    }
+
+}
+
+
+
+article{@include linear-gradient(#fff,$lcolor); padding:10px; }
+
+/****MODULES STYLES*****/
+/****STATES STYLES*****/

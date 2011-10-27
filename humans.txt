@@ -1,43 +1,12 @@
 /* the humans responsible & colophon */
-/* humanstxt.org */
-
 
 /* TEAM */
-  <your title>: <your name>
-  Site: 
+  nachoelg.com: Nacho Elguezabal
+  Site: sporteduca
   Twitter: 
-  Location: 
+  Location: Granada, Spain. Por que soy Español
 
 /* THANKS */
-  Names (& URL): 
+  A Paul Irish and company for html5boilerplate
+ y tambien al que haya hecho SASS. Y eso sin hablar de Javascript and libraries.
 
-/* SITE */
-  Standards: HTML5, CSS3
-  Components: Modernizr, jQuery
-  Software:
-  
-
-                                    
-                               -o/-                       
-                               +oo//-                     
-                              :ooo+//:                    
-                             -ooooo///-                   
-                             /oooooo//:                   
-                            :ooooooo+//-                  
-                           -+oooooooo///-                 
-           -://////////////+oooooooooo++////////////::    
-            :+ooooooooooooooooooooooooooooooooooooo+:::-  
-              -/+ooooooooooooooooooooooooooooooo+/::////:-
-                -:+oooooooooooooooooooooooooooo/::///////:-
-                  --/+ooooooooooooooooooooo+::://////:-   
-                     -:+ooooooooooooooooo+:://////:--     
-                       /ooooooooooooooooo+//////:-        
-                      -ooooooooooooooooooo////-           
-                      /ooooooooo+oooooooooo//:            
-                     :ooooooo+/::/+oooooooo+//-           
-                    -oooooo/::///////+oooooo///-          
-                    /ooo+::://////:---:/+oooo//:          
-                   -o+/::///////:-      -:/+o+//-         
-                   :-:///////:-            -:/://         
-                     -////:-                 --//:        
-                       --                       -:        
