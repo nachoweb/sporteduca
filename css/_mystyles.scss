@@ -1,4 +1,5 @@
-$lcolor:#FFA500;
+$twidth:950px;
+$lcolor:#FF69B4;
 
 @import url(http://fonts.googleapis.com/css?family=Salsa);
 
@@ -6,29 +7,50 @@ $lcolor:#FFA500;
 body{@include linear-gradient($lcolor,#FFF);}
 
 /****LAYOUT STYLES*****/
-#container{width: 900px;margin: auto; }
-header{padding: 15px 0;} 
+#container{width: $twidth;margin: auto; }
+<h1>
+header{padding: 10px 0;} 
 /*#topsec{padding: 5px}*/
-#logo{margin:0 40px;font-family:'Salsa';font-weight: bold;font-size: 35px;vertical-align: middle;color:Navy;}
+#logo{margin:0 30px;font-family:'Salsa';font-weight: bold;font-size: 35px;vertical-align: middle;color:Navy;}
+
+
+
 
 
 nav {
+	$bnum:5;
+	$bbord:4px;
+	$bpadding:5px;
+	$bwidth: ($twidth/($bnum+2))- 2*5 - 2*4;
+	$bmargin: $twidth* ((1/($bnum*2)) - (1/(2*$bnum+4)) ) ;
     li{
-        float:left;width: 14%;margin:0 18px;padding:20px 5px; border: 4px solid darken($lcolor,10%);@include border-radius(18px);text-align: center;vertical-align: middle;
-        background-color: lighten($lcolor,40%);
-        
+        float:left;width: $bwidth;margin:0 $bmargin;padding:20px $bpadding; 
+        border: $bbord solid darken($lcolor,10%);@include border-radius(18px);text-align: center;vertical-align: middle;
+        background-color: lighten($lcolor,40%);@include transition(all 0.5s ease-in);
+         
         &:hover{border-color:yellow;background-color: lighten($lcolor,60%);}
         
-        &:hover > a {color:#06e;}
+        &:hover > a {color:#06e;@include transition(all 0.5s ease-in);}
         
          a { text-decoration: none;font-family: 'Salsa';font-size: 18px; color: Navy;  }
     }
 
 }
 
+#carrusel{
+		border: 6px solid lightgray;
+		img{width:$twidth - 12;height:250px;float:left;}
+		
+		#dots{
+			position:absolute;right:0;bottom:0;margin:5px 10px;
+			
+            .dot{ display:inline-block;background:transparent url('../img/dot2.png') ;height:16px;width:16px; }
+			.active{background:transparent url('../img/dot1.png') ;}
+		}
+		
+}
 
-
-article{@include linear-gradient(#fff,$lcolor); padding:10px; }
+article{ padding:10px; }
 
 /****MODULES STYLES*****/
 /****STATES STYLES*****/

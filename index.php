@@ -12,7 +12,7 @@
        More info: h5bp.com/b/378 -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title></title>"
+  <title></title>
 
   <meta name="description" content="">
   <meta name="author" content="">
@@ -38,9 +38,9 @@
 <body>
   <div id="container">
     <header>
-        <div id="topsec">
-            <span id="logo">SportEduca</span>
-        </div>
+		<div id="topsec">
+			<span id="logo">SportEduca</span>
+		</div>
         <nav>
             <ul class="clearfix">
                 <li><a href="#">Nosotros </a></li>
@@ -52,8 +52,12 @@
         </nav>
     </header>
     <div id="main" role="main">
-        <div id="carrusel">
-            <img src="http://dummyimage.com/900x250">
+        <div id="carrusel" class="clearfix">
+		    	<img src="img/clase12.jpg" />
+				<img src="img/clase2.jpg" style="display:none;" />
+				<img src="img/clase3.jpg" style="display:none;" />
+				<img src="img/clase4.jpg" style="display:none;" />
+    <!--        <img src="http://dummyimage.com/900x250"> -->
         </div>
         <article>
         <?php for($i=0;$i<10;$i++): ?>
