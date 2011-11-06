@@ -299,87 +299,82 @@ td {
    Author: 
    ========================================================================== */
 /** Mixins **/
-@import url(http://fonts.googleapis.com/css?family=Salsa);
-/****BASE STYLES*****/
-body {
-  background-color: white;
-  background-image: -moz-linear-gradient(#ff69b4, white);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ff69b4), color-stop(1, white));
-  background-image: -webkit-linear-gradient(#ff69b4, white);
-  background-image: -o-linear-gradient(#ff69b4, white); }
+/****Estilos base******/
+html, body {
+  height: 100%; }
 
-/****LAYOUT STYLES*****/
-#container {
-  width: 950px;
-  margin: auto; }
+/****Estilos layout******/
+#wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -50px;
+  background-color: #ffd300; }
 
 header {
-  padding: 10px 0; }
+  height: 90px;
+  width: 100%;
+  background-color: #fde663; }
 
-/*#topsec{padding: 5px}*/
-#logo {
-  margin: 0 30px;
-  font-family: 'Salsa';
-  font-weight: bold;
-  font-size: 35px;
-  vertical-align: middle;
-  color: Navy; }
+#cont-header {
+  position: relative; }
 
-nav li {
-  float: left;
-  width: 117.714px;
-  margin: 0 27.143px;
-  padding: 20px 5px;
-  border: 4px solid #ff369b;
-  -moz-border-radius: 18px;
-  -webkit-border-radius: 18px;
-  border-radius: 18px;
+#cont-header, #main {
+  width: 960px;
+  margin: auto; }
+
+#callout {
+  margin-top: 20px;
+  background-color: #937ab1; }
+
+#contenido {
+  margin: 20px 0;
+  background-color: white; }
+
+footer, div.push {
+  height: 50px; }
+
+footer {
+  width: 100%;
+  background-color: #fde663;
   text-align: center;
-  vertical-align: middle;
-  background-color: white;
-  -moz-transition: all 0.5s ease-in;
-  -o-transition: all 0.5s ease-in;
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in; }
-  nav li:hover {
-    border-color: yellow;
-    background-color: white; }
-  nav li:hover > a {
-    color: #06e;
-    -moz-transition: all 0.5s ease-in;
-    -o-transition: all 0.5s ease-in;
-    -webkit-transition: all 0.5s ease-in;
-    transition: all 0.5s ease-in; }
-  nav li a {
-    text-decoration: none;
-    font-family: 'Salsa';
-    font-size: 18px;
-    color: Navy; }
+  color: white; }
 
-#carrusel {
-  border: 6px solid lightgray; }
-  #carrusel img {
-    width: 938px;
-    height: 250px;
-    float: left; }
-  #carrusel #dots {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin: 5px 10px; }
-    #carrusel #dots .dot {
-      display: inline-block;
-      background: transparent url("../img/dot2.png");
-      height: 16px;
-      width: 16px; }
-    #carrusel #dots .active {
-      background: transparent url("../img/dot1.png"); }
+/****Estilos modulos******/
+nav#principal {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 20px 0; }
+  nav#principal li {
+    float: left;
+    padding: 10px;
+    margin-left: 10px;
+    border: 3px solid #ffd300;
+    -moz-border-radius: 12px;
+    -webkit-border-radius: 12px;
+    border-radius: 12px; }
 
-article {
-  padding: 10px; }
+#callout {
+  padding: 20px; }
+  #callout h1 {
+    margin: 0;
+    float: left;
+    width: 40%;
+    font-size: 24px;
+    color: white; }
+  #callout > div {
+    float: left;
+    border: 2px double #fde663;
+    margin-left: 20px; }
+    #callout > div img {
+      height: 230px;
+      width: 520px; }
 
-/****MODULES STYLES*****/
-/****STATES STYLES*****/
+ul#carrusel {
+  margin: 0;
+  padding: 0; }
+
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
    ========================================================================== */
@@ -436,6 +431,12 @@ article {
 
 .clearfix {
   zoom: 1; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
 
 /* ==|== media queries ======================================================
    PLACEHOLDER Media Queries for Responsive Design.

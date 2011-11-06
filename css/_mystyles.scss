@@ -1,56 +1,49 @@
-$twidth:950px;
-$lcolor:#FF69B4;
+/****Estilos base******/
+html,body{height:100%;}
+/****Estilos layout******/
+$width-total:960px;
+$height-footer:50px;
+$margin-layout:20px;
 
-@import url(http://fonts.googleapis.com/css?family=Salsa);
-
-/****BASE STYLES*****/
-body{@include linear-gradient($lcolor,#FFF);}
-
-/****LAYOUT STYLES*****/
-#container{width: $twidth;margin: auto; }
-<h1>
-header{padding: 10px 0;} 
-/*#topsec{padding: 5px}*/
-#logo{margin:0 30px;font-family:'Salsa';font-weight: bold;font-size: 35px;vertical-align: middle;color:Navy;}
+$amarilloCla:#FDE663;
+$amarilloOsc:#FFD300;
+$morado:#937AB1;
 
 
 
+#wrapper{ min-height: 100%; height: auto !important; height: 100%; margin: 0 auto  (-$height-footer); background-color:$amarilloOsc;}
+header{height:90px;width:100%;background-color:$amarilloCla;}
+#cont-header{position:relative;}
+#cont-header,#main{width:$width-total;margin:auto;}
 
 
-nav {
-	$bnum:5;
-	$bbord:4px;
-	$bpadding:5px;
-	$bwidth: ($twidth/($bnum+2))- 2*5 - 2*4;
-	$bmargin: $twidth* ((1/($bnum*2)) - (1/(2*$bnum+4)) ) ;
-    li{
-        float:left;width: $bwidth;margin:0 $bmargin;padding:20px $bpadding; 
-        border: $bbord solid darken($lcolor,10%);@include border-radius(18px);text-align: center;vertical-align: middle;
-        background-color: lighten($lcolor,40%);@include transition(all 0.5s ease-in);
-         
-        &:hover{border-color:yellow;background-color: lighten($lcolor,60%);}
-        
-        &:hover > a {color:#06e;@include transition(all 0.5s ease-in);}
-        
-         a { text-decoration: none;font-family: 'Salsa';font-size: 18px; color: Navy;  }
-    }
+#callout{margin-top:$margin-layout;background-color:$morado;}
+
+#contenido{margin:$margin-layout 0;background-color:white;}
+
+footer,div.push{height:$height-footer;}
+footer{width:100%;background-color:$amarilloCla;text-align:center;color:white;}
+
+
+
+/****Estilos modulos******/
+nav#principal{
+  position:absolute;bottom:0;right:0;margin:20px 0; 
+  li{float:left;padding:10px;margin-left:10px;border:3px solid $amarilloOsc;@include border-radius(12px)}
+
 
 }
 
-#carrusel{
-		border: 6px solid lightgray;
-		img{width:$twidth - 12;height:250px;float:left;}
-		
-		#dots{
-			position:absolute;right:0;bottom:0;margin:5px 10px;
-			
-            .dot{ display:inline-block;background:transparent url('../img/dot2.png') ;height:16px;width:16px; }
-			.active{background:transparent url('../img/dot1.png') ;}
-		}
-		
+
+
+#callout{
+  padding:20px;
+  h1{margin:0;float:left;width:40%;font-size:24px;color:white;}
+> div{
+  float:left;border:2px double $amarilloCla;margin-left:20px;
+  img{height:230px;width:520px;}
+  }
+
 }
 
-article{ padding:10px; }
-
-/****MODULES STYLES*****/
-/****STATES STYLES*****/
+ul#carrusel{margin:0;padding:0;}

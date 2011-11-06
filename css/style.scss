@@ -242,7 +242,8 @@ td { vertical-align: top; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
 
-
+.left{float:left;}
+.right{float:right;}
 
 /* ==|== media queries ======================================================
    PLACEHOLDER Media Queries for Responsive Design.
