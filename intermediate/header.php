@@ -23,9 +23,7 @@
   <!-- place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
 
   <!-- CSS: implied media=all -->
-  <!-- CSS concatenated and minified via ant build script-->
-  <link rel="stylesheet" href="css/style.css">
-  <!-- end CSS-->
+  <link rel='stylesheet' href='css/b001af49c4f5b840b445cf8a0ce88fae3f31c85d.css'>
 
   <!-- more ideas for your <head> here: h5bp.com/d/head-tips -->
 

@@ -1,49 +1,93 @@
 /****Estilos base******/
-html,body{height:100%;}
+html,body{height:100%;color:#4D4D4D;}
+a{text-decoration:none;}
+ul{padding:0 0 0 15px;}
+h1,h2{text-align:center;margin:5px 0;}
 /****Estilos layout******/
 $width-total:960px;
+$height-header:90px;
 $height-footer:50px;
-$margin-layout:20px;
+$margin-layout:10px;
+// $color-header:#FDE663; //Amarillo claro
+// $color-wrapper:#FFD300;  //Amarillo oscuro
+// $color-callout:#937AB1; //morado
+$color-header:rgba(111, 81, 140,0.9);
+$color-wrapper:tranparent;//#CABE4E;
+$color-callout:rgba(97, 140, 66,0.9);
 
-$amarilloCla:#FDE663;
-$amarilloOsc:#FFD300;
-$morado:#937AB1;
 
 
-
-#wrapper{ min-height: 100%; height: auto !important; height: 100%; margin: 0 auto  (-$height-footer); background-color:$amarilloOsc;}
-header{height:90px;width:100%;background-color:$amarilloCla;}
+#wrapper{ min-height: 100%; height: auto !important; height: 100%; margin: 0 auto  (-$height-footer); background-color:$color-wrapper;}
+header{height:$height-header;width:100%;background-color:$color-header;}
 #cont-header{position:relative;}
 #cont-header,#main{width:$width-total;margin:auto;}
 
 
-#callout{margin-top:$margin-layout;background-color:$morado;}
+#callout{margin-top:$margin-layout;background-image:url('../img/callout.png');}
 
-#contenido{margin:$margin-layout 0;background-color:white;}
+.contenido{margin:$margin-layout 0;padding:20px;}
 
-footer,div.push{height:$height-footer;}
-footer{width:100%;background-color:$amarilloCla;text-align:center;color:white;}
+footer,div.push{display:none;height:$height-footer;}
+footer{width:100%;background-color:$color-header;text-align:center;color:white;}
 
 
 
 /****Estilos modulos******/
+#logo{position:relative;top:-10px;left:30px;}
 nav#principal{
-  position:absolute;bottom:0;right:0;margin:20px 0; 
-  li{float:left;padding:10px;margin-left:10px;border:3px solid $amarilloOsc;@include border-radius(12px)}
-
+  position:absolute;bottom:0;right:0;margin:0 0 30px;
+  li{
+    @include transition(all 0.6s ease-out);padding-top:5px;
+    float:left;margin-left:10px;border-top:3px solid transparent;//@include border-radius(12px);
+    a{color:#A698BC;font-weight:bold;font-size:18px;}
+    &:hover,&.activo{border-top:3px solid white;
+           a{color:white;} 
+    } 
+  }
 
 }
 
 
 
 #callout{
-  padding:20px;
-  h1{margin:0;float:left;width:40%;font-size:24px;color:white;}
+  padding:10px;@include border-radius(20px);
+  h1{
+    margin:0;float:left;width:40%;font-size:24px;color:white;
+  }
+  
 > div{
-  float:left;border:2px double $amarilloCla;margin-left:20px;
-  img{height:230px;width:520px;}
+    position:relative;float:left;border:3px solid white;margin-left:20px;
+    img{height:230px;width:520px;}
+    #flechaDer{position:absolute;right:0;width:50px;height:230px;background-position:50px 0;background-image:url('../img/flechas.png');}
+    #flechaIzq{position:absolute;left:0;width:50px;height:230px;background-image:url('../img/flechas.png');}
   }
 
 }
 
-ul#carrusel{margin:0;padding:0;}
+
+ul#carrusel{
+  margin:0;padding:0;
+}
+
+
+
+.contenido{
+  color:hsl(58, 98%, 7%);font-size:15px;line-height:1.5;background-color:beige;@include border-radius(20px);
+  > h1{text-align:center;margin-top:0;border-bottom:4px solid #7a7a78;}
+  .bloque25{width:24%;}
+  .bloque75{width:74%;}
+  .bloque33{width:32%;}
+  .bloque67{width:66%;}
+  li:before{content:"◈";}
+}
+
+
+#bgCanvas{position:fixed;top:0;left:0;width:100%;height:100%;z-index:-1;}
+
+/**CONTENIDO PAGINAS***/
+#pag1{
+  .bloque33{
+    padding:4px;
+    h2{color:red;background-color:#FFFF1A;} 
+  }
+}

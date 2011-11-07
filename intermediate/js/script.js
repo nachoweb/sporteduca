@@ -1,0 +1,1 @@
+$(function(){var b=$("#carrusel");b.find("img").removeClass("hidden");b.simplecarousel({slidespeed:1700,auto:6000,width:520,height:230,next:$("#flechaDer"),prev:$("#flechaIzq")});var a=document.getElementById("bgCanvas");a.patternizer({stripes:[{color:"#7a7a78",rotation:200,opacity:50,mode:"plaid",width:75,gap:1,offset:0}],bg:"#ffffff"})});
